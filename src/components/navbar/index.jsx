@@ -22,7 +22,7 @@ const Navbar = () =>{
                 </div>
                 <button className="w-[100px] h-[35px] rounded-[6px] border-none bg-[#46A358] text-white text-base flex items-center justify-center gap-4">
                    <LoginOutlined /> Login
-                    </button>
+                </button>
                     
             </div>
         </div>
