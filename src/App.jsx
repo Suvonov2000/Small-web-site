@@ -2,23 +2,27 @@ import { Carousel } from "antd";
 import Navbar from "./components/navbar";
 import Opener from "./components/opener";
 import Sidebar from "./components/sidebar";
+import Main from "./components/main";
 
 const App = () =>{
   return (
     <div className="w-[80%] m-auto">
       <Navbar />
-      <Carousel>
+      <Carousel dotPosition="right">
         <div>
-          <Opener />
+          <Opener title="Planet Care"/>
         </div>
         <div>
-          <Opener />
+          <Opener title="Blogs" />
         </div>
         <div>
-          <Opener />
+          <Opener title="Shop" />
         </div>
       </Carousel>
-      <Sidebar />
+      <div className="mt-[46px] flex gap-6">
+        <Sidebar/>
+        <Main/>
+      </div>
     </div>
   )
 }
