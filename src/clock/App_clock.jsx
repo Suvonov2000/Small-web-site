@@ -54,7 +54,7 @@ function App () {
                 <div className="flex justify-center gap-[10px] text-7xl w-full mt-[20px]">
                     <h3>{hour}</h3>:<h3>{minute}</h3>:<h3>{second}</h3>
                 </div>
-                <div className="w-[80%] m-auto flex justify-center gap-[50px] mt-[20px]">
+                <div className="w-[80%] m-auto flex justify-center gap-[50px] mt-[20px] cursor-pointer">
                   {running
                    ?<Button onClick={()=>(setRunning(false))}>Pause</Button>
                    :<Button onClick={()=> setRunning(true)}>Start</Button>
