@@ -6,7 +6,7 @@ const reducer = (state, action) => {
     switch (action.type) {
         case "search":
             return{data: mockData.filter((value)=>{
-                return value.title.includes(action.payload.searchValue);
+                return value.title.toLowerCase().includes(action.payload.searchValue.toLowerCase());
             })};
             default:
     }
