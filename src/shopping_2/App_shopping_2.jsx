@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Card from "./component/Card";
+import { parfumContext } from "./context/parfumeContext";
 
 const App_shopping_2 = () =>{
     const [data, setData] = useState([{
@@ -53,7 +54,9 @@ const App_shopping_2 = () =>{
         setData(data.filter((value)=> value.id !== id));
     };
 
-    return <div>
+    return
+    <parfumContext.Provider value={"hello"}>
+        <div>
         {data.map((value)=>{
             return <div 
             key={value.id}
@@ -72,6 +75,7 @@ const App_shopping_2 = () =>{
             </div>
         })}
     </div>
+    </parfumContext.Provider>
 }
 
 export default App_shopping_2; 

@@ -1,8 +1,10 @@
 
-import React from "react";
+import React, {useContext} from "react";
 import Delete from "../DeleteItems";
+import { parfumContext } from "../../context/parfumeContext";
 
 const Card = (props) =>{
+    const data = useContext(parfumContext);
     return <div 
     style={{
         width:"300px",
@@ -14,7 +16,7 @@ const Card = (props) =>{
         <h1 style={{textAlign:"center", textTransform:"uppercase"}}>{props.title}</h1>
         <h3>{props.content}</h3>
         <p>
-            <b>Price:</b> {props.price}
+            <b>Price:</b> {data}
         </p>
         <Delete onDelete={props.onDelete} id={props.id}/>
     </div>
