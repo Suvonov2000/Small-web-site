@@ -1,13 +1,14 @@
 import React from "react";
-import { Countcontext } from "./context/countContext";
-import  Card  from "./Card";
+import Navbar from "./Navbar/navbar";
+import MovieBody from "./movieBody";
 
-const App_con = () =>{
-    return (
-        <Countcontext.Provider value="This is global value">
-            <Card/>
-        </Countcontext.Provider>
-    )
+const App_con = () => {
+  return (
+    <div>
+      <Navbar />
+      <MovieBody />
+    </div>
+  );
 };
 
 export default App_con;
